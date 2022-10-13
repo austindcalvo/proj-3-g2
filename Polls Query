@@ -56,11 +56,11 @@ Create Table Pres2016(
     can_maplight varchar
 );
 
---select * from Pres2016
---LIMIT 100;
+select * from Pres2016
+LIMIT 100;
 
 Create Table Pres2020(
-    precinct varchar,
+    year integer,
     office varchar,
     party_detail varchar,
     party_simple varchar,
@@ -68,24 +68,41 @@ Create Table Pres2020(
     votes integer,
     countyname varchar,
     countyfips varchar,
-    jurisname varchar,
-    juris_fips varchar,
     candidatename varchar,
-    district varchar,
-    magnitude integer,
-    dataverse varchar,
-    year integer,
     stage varchar,
-    statename varchar,
-    special boolean,
     writein boolean,
     state_abbv varchar,
-    statefips integer,
-    state_cen integer,
-    state_ic integer,
-    electdate date,
-    readme boolean     
+    statefips integer    
 );
 
---select * from Pres2020
---LIMIT 100;
+select * from Pres2020
+LIMIT 100;
+
+
+--Change countyfips to float
+ALTER TABLE Pres2020
+Alter Column countyfips Type Float
+Using (case when countyfips=''Then 0.0 else countyfips::float END);
+
+--Combine fips codes
+SELECT
+	CONCAT  (statefips, countyfips) AS "combinedfips"
+FROM
+	pres2016;
+
+
+
+----------------------
+--Rename to allow join to become new table
+ALTER TABLE incomedata 
+RENAME COLUMN zip TO zip2;
+
+
+--Create new table
+Create Table final_data
+AS
+    Select *
+    From travis2019
+    Left Join incomedata
+    on (travis2019.zip=incomedata.zip2);
+
