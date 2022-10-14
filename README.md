@@ -1,1 +1,38 @@
 # proj-3-g2
+
+Project Introduction
+The purpose of this project is to review voting trends in the United States Presidential Elections in 2016 and 2020. We will explore the relationships between different demographic and geographic variables and the method of voting to determine correlations between these factors and voting for one of two major parties.
+
+Group Members 
+•	Matthew Belcher
+•	Wynette Burke
+•	Austin Calvo
+•	Gino Hernandez
+•	Jasmine Leal
+
+Technologies/Languages Used 
+•	Python/Flask
+•	HTML
+•	JSON
+•	SQL
+•	Pandas
+•	Leaflet
+•	Javascript
+
+Questions we'll ask of the data:
+1. Which states voted for one party in 2016 and another in 2020?
+2. How did the demographic makeup of these voter bases change between 2016 and 2020?
+3. How did campaign spending change in each state between 2016 and 2020?
+
+Data Sources:
+1. MIT Election Data and Science Lab dataverse.harvard.edu. (2022, March 18) County Presidential Election Returns 2000-2020. Retrieved October 5, 2022, from https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
+This data was collected via CSV file. The dataset source is compiled by Alexander Agadjanian, John Curiel and Samuel Baltz from federal elections data provided by The Federal Elections Commission. The dataset includes statewide election returns by state for years 2000-2020. It was chosen due to having higher level data that was already compiled and cleaned, making it relatively easily accessible compared to other larger datasets chosen. The data was extracted from the website via CSV file.
+
+2. MIT Election Data and Science Lab dataverse.harvard.edu. (2022, January 26) U.S. President Precinct-Level Returns 2016. Retrieved October 5, 2022, from https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/LYWX3D
+This data was collected via CSV file. The dataset source is compiled by Alexander Agadjanian, John Curiel and James Dunham from federal elections data provided by The Federal Elections Commission. The dataset includes state and county election returns by state for the year 2016. It was chosen for its wide array of fields and detailed data. The data was extracted from the website via CSV file.
+
+3. MIT Election Data and Science Lab dataverse.harvard.edu. (2022, March 17) U.S. President Precinct-Level Returns 2016. Retrieved October 5, 2022, from https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OKL2K1
+This data was collected via CSV file. The dataset source is compiled by Samuel Baltz from federal elections data provided by The Federal Elections Commission. The dataset includes state and county election returns by state for the year 2020. It was chosen for its wide array of fields and detailed data. The data was extracted from the website via CSV file.
+
+4. FEC API Data FEC.gov (undated). Retrieved October 5, 2022, from api.open.fec.gov/developers
+This data was collected via API. The dataset source is compiled by the The Federal Elections Commission. The dataset includes state and county election returns by state for the year 2020. It was chosen for its wide array of fields and detailed data. The data was extracted from the website via CSV file.
