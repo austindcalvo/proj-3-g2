@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Election Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Leaflet JavaScript code-->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+      
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+    <!-- leaflet-choropleth JavaScript -->
+    <script type="text/javascript" src="static/js/choropleth.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  
+  
+  <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 jumbotron" style="background-image: url(https://www.kindpng.com/picc/m/45-457250_us-flag-banner-png-transparent-png.png); background-size: 100% 100%;">
+            <!-- Jumbotron/Banner section -->
+            <h1 display-4><br>Election-42 Dashboard</h1>
+        </div>
+    </div>
+    
+    <!-- Temp Remove to get my function working -->
+    <!-- <div class="row center">
+         Render our data 
+        <h3>{{ text }}</h3><br>
+    </div> -->
+
+    <div class="row">
+        <!-- Section for the year selection -->
+        <div class="well col-md-3" id="selectYear">
+            <h5><strong> Select Presidental Election Year:</strong></h5>
+            <select id="selElectionYear" onchange="optionChanged(this.value)"></select>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- First Column with Year Dropdown, Election Date info, Campaign Finance by Stateby year selected -->
+        <div class="col-md-6">
+            
+            <!-- Section for the election Date information -->
+            <div id="electionInfo">
+                <h3>Table information on Election Date</h3>
+
+            </div>
+            
+        </div>
+
+
+
+        <!-- Second Column of information/visualization -->
+        <!-- <div class="col-md-6"> -->
+            <div>
+                <h3>Map: Final Result from Election</h3>
+                <div id="map-container">
+                    <div id="map"></div>
+                  </div>
+            </div>
+           <div>
+                <h3>Demographical Info on Election</h3>
+                <div id="demo"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Section for the election Campaign Finance information -->
+        <div id="campaignFinances">
+            <h3>Bar Chart of the finances by state based on the date selected</h3>
+            <div id="bar"></div> <!--Insert barchart here -->
+        </div>
+    </div>
+    
+
+  </div>
+
+  <!-- Visualization Javascript Libraries -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+  <!-- Team defined Javascript code -->
+  <script src="static/js/campaignFinance.js"></script> 
+  <script type="text/javascript" src="static/js/2020Election_map.js"></script>
+  
+  
+</body>
+
+</html>
