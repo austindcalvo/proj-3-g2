@@ -5,7 +5,7 @@ The purpose of this project is to review voting trends in the United States Pres
 
 Group Members 
 •	Matthew Belcher
-•	Wynette Burke
+•	Waynette Burke
 •	Austin Calvo
 •	Gino Hernandez
 •	Jasmine Leal
