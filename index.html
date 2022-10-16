@@ -12,7 +12,25 @@
 
   <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"> -->
+
+ <!-- Leaflet JavaScript code-->
+ <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+ integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+ crossorigin=""></script>  
+
+<!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+
+<!-- leaflet-choropleth JavaScript -->
+<script type="text/javascript" src="static/js/choropleth.js"></script>
+<!-- <script type="text/javascript" src="static/js/choropleth.js"></script> -->
+
+<!-- Our CSS -->
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+
 
 </head>
 
@@ -24,12 +42,7 @@
     </div>
     <br><br>
     
-    <!-- Temp Remove to get my function working -->
-    <!-- <div class="row center">
-         Render our data 
-        <h3>{{ text }}</h3><br>
-    </div> -->
-
+    
     <div class="row">
         <!-- Section for the Year Dropdown -->
         <div class="well col-md-4" id="selectYear">
@@ -46,26 +59,22 @@
             <div class="card" id="electionInfo">
                 <h4 class="card-header">Voter Preferences and Election Count</h4>
                 <div class="card-body">
-                  <h5 class="card-title">Mail In vs In Person</h5>
-                  <div id="electionInfo"></div>
-                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  <div id="total-votes"></div>
+                  <div id="voter-turnout"></div>
                 </div>
             </div>
 
             <br><br>
-
-           
+    
         </div> <!--End of First column in ROW 1-->
-
-
 
         <!-- Second Column in the first row with  information/visualization -->
         <div class="col-md-6">
           <div class="card">
             <h4 class="card-header">Demographical Info on Election</h4>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <div id="demo"></div>
+                <div id="demo-gender"></div>
+                <div id="demo-ethnicty"></div>
             </div>
         </div>
         
@@ -74,31 +83,25 @@
     </div> <!--End of First ROW-->
 
     <div class="row">
-        <!-- Card Section for the demographic information -->
+        <!-- Card Section for the US Map information -->
         <div class="card">
           <h4 class="card-header">Map: Final Result from Election</h4>
           <div class="card-body">
-            <!-- <h5 class="card-title">Special title treatment</h5> -->
+            <div id="map-container">
             <div id="map"></div>
+          </div>
           </div>
       </div>
       
     </div>
     <br><br>
     <div class="row">
-        <!-- Section for the election Campaign Finance information -->
-        <!-- <div id="campaignFinances">
-            <h3></h3>
-            <div id="bar"></div> 
-        </div> -->
-
         <div class="card">
             <h4 class="card-header">Campaign Finance</h4>
             <div class="card-body">
               <div id="bar"></div> <!--Insert barchart here -->
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
-          </div>
+        </div>
 
     </div>
     <br><br>
@@ -115,7 +118,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   
   <!-- Team defined Javascript code -->
-  <script src="../static/js/campaignFinance_final.js"></script>
+  <script src="static/js/initDropDown.js"></script>
+  <script src="static/js/optionChanged.js"></script>
+  <script src="static/js/updatePlotly.js"></script>
+    
+  <script src="static/data/geojson_2020_final.js"></script>
+  <script src="static/data/geojson_2016_final.js"></script>
+
+  
+  <script src="static/js/map_option.js"></script>
+
   
   
 </body>
