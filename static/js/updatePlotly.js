@@ -168,7 +168,7 @@ function updatePlotly(yearSelected,dataDemo, dataRepu) {
 
           var dataEthnic = [{
             values: [1098300, 189220, 164590, 68810],
-            labels: ['White', 'Black', 'Hispanic', 'Asian'],
+            labels: ['White', 'black', 'Hispanic', 'Asian'],
             type: 'pie',
             textinfo: "percent",
             textposition: "inside",
