@@ -1,5 +1,8 @@
 # Election Dashboard
 
+The Election Dashboard can be found at:
+https://austindcalvo.github.io/proj-3-g2/
+
 Project Introduction
 The purpose of this project is to review voting trends in the United States Presidential Elections in 2016 and 2020. We will explore the relationships between different demographic and geographic variables and the method of voting to determine correlations between these factors and voting for one of two major parties.
 
