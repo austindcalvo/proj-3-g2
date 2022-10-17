@@ -167,8 +167,8 @@ function updatePlotly(yearSelected,dataDemo, dataRepu) {
           };
 
           var dataEthnic = [{
-            values: [1011619, 404386, 403992, 321547],
-            labels: ['White', 'black', 'Hispanic', 'Asian'],
+            values: [1098300, 189220, 164590, 68810],
+            labels: ['White', 'Black', 'Hispanic', 'Asian'],
             type: 'pie',
             textinfo: "percent",
             textposition: "inside",
