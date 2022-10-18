@@ -45,17 +45,23 @@ function updatePlotly(yearSelected,dataDemo, dataRepu) {
       };
       
       var data = [democrats, republicans];
-      
+      let customWidth = democrats.x.length*50;
       var layout = {
         barmode: 'group',
-        title: 'Contribution Receipt Amount per Party',
         xaxis: {tickangle: -45, title: "Individual States"},
         yaxis:{title:"USD (millions)"},
-        width: 1000
+        width: customWidth,
+        legend: {
+          showlegend:true,
+          x: 1,
+          xanchor: 'right',
+          y: 1
+        }
+        
         
     };
-      
-      Plotly.newPlot('bar', data, layout);
+    const config = {responsive: true}; 
+      Plotly.newPlot('bar', data, layout, config);
 
       //***********************************************************/
       // IF BLOCK FOR 2016
@@ -95,7 +101,7 @@ function updatePlotly(yearSelected,dataDemo, dataRepu) {
 
           var dataEthnic = [{
             values: [911619, 304386, 303992, 121547],
-            labels: ['White', 'black', 'Hispanic', 'Asian'],
+            labels: ['White', 'Black', 'Hispanic', 'Asian'],
             type: 'pie',
             textinfo: "percent",
             textposition: "inside",
@@ -168,11 +174,7 @@ function updatePlotly(yearSelected,dataDemo, dataRepu) {
 
           var dataEthnic = [{
             values: [1098300, 189220, 164590, 68810],
-
             labels: ['White', 'Black', 'Hispanic', 'Asian'],
-
-            labels: ['White', 'black', 'Hispanic', 'Asian'],
-
             type: 'pie',
             textinfo: "percent",
             textposition: "inside",

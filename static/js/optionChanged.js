@@ -38,14 +38,14 @@ function optionChanged(value){
          
         updatePlotly(value,demo_list,repu_list);
         
-        
+                
         //Map Update based on year selected
         if (value == "2016"){
            
             initMap(statesData2016);
             
         }else if (value == "2020"){
-         
+           
             initMap(statesData2020);
         };
         
