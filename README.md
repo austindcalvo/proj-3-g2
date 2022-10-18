@@ -3,17 +3,17 @@
 The Election Dashboard can be found at:
 https://austindcalvo.github.io/proj-3-g2/
 
-Project Introduction
+##Project Introduction
 The purpose of this project is to review voting trends in the United States Presidential Elections in 2016 and 2020. We will explore the relationships between different demographic and geographic variables and the method of voting to determine correlations between these factors and voting for one of two major parties.
 
-Group Members 
+## Group Members 
 •	Matthew Belcher
 •	Waynette Burke
 •	Austin Calvo
 •	Gino Hernandez
 •	Jasmine Leal
 
-Technologies/Languages Used 
+## Technologies/Languages Used 
 •	Python/Flask
 •	HTML
 •	JSON
@@ -22,12 +22,12 @@ Technologies/Languages Used
 •	Leaflet
 •	Javascript
 
-Questions we'll ask of the data:
+## Questions we'll ask of the data:
 1. Which states voted for one party in 2016 and another in 2020?
 2. How did the demographic makeup of these voter bases change between 2016 and 2020?
 3. How did campaign contributions change in each state between 2016 and 2020?
 
-Data Sources:
+## Data Sources:
 1. MIT Election Data and Science Lab dataverse.harvard.edu. (2022, March 18) County Presidential Election Returns 2000-2020. Retrieved October 5, 2022, from https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
 This data was collected via CSV file. The dataset source is compiled by Alexander Agadjanian, John Curiel and Samuel Baltz from federal elections data provided by The Federal Elections Commission. The dataset includes statewide election returns by state for years 2000-2020. It was chosen due to having higher level data that was already compiled and cleaned, making it relatively easily accessible compared to other larger datasets chosen. The data was extracted from the website via CSV file.
 
