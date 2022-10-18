@@ -25,7 +25,7 @@ Technologies/Languages Used
 Questions we'll ask of the data:
 1. Which states voted for one party in 2016 and another in 2020?
 2. How did the demographic makeup of these voter bases change between 2016 and 2020?
-3. How did campaign spending change in each state between 2016 and 2020?
+3. How did campaign contributions change in each state between 2016 and 2020?
 
 Data Sources:
 1. MIT Election Data and Science Lab dataverse.harvard.edu. (2022, March 18) County Presidential Election Returns 2000-2020. Retrieved October 5, 2022, from https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ
