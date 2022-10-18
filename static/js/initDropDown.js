@@ -5,7 +5,12 @@
 let dropdown = document.getElementById('selElectionYear');
 let defaultOption = document.createElement('option');
 
-var map = L.map('map').setView([37.8, -96], 4);
+var map = L.map('map', {
+    minZoom:4.2, //Setting the max and min Zoom
+    maxZoom:4.2
+}).setView([37.8, -96], 4);
+
+
 
 var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -24,9 +29,6 @@ function initDropDown(){
         option.text=electionYear[i];
         dropdown.add(option);
     };
-
-
-//L.geoJson(statesData).addTo(map);
 
 
 };

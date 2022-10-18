@@ -1,0 +1,27 @@
+[
+    {
+        "Party": "Democrat",
+        "Candidate": "Joseph R Biden",
+        "Total Votes": "77817344",
+        "Year": "2020"
+    },
+    {
+        "Party": "Republican",
+        "Candidate": "Donald J Trump",
+        "Total Votes": "72196695",
+        "Year": "2020"
+    },
+    {
+        "Party": "Democrat",
+        "Candidate": "Hillary Clinton",
+        "Total Votes": "61765290",
+        "Year": "2016"
+    },
+    {
+        "Party": "Republican",
+        "Candidate": "Donald J Trump",
+        "Total Votes": "60335786",
+        "Year": "2016"
+    }
+]
+
